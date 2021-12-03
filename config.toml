@@ -1,0 +1,115 @@
+baseurl = "https://toamitkumar.github.io"
+title = "Amit Kumar"
+theme = "hugo-theme-cleanwhite"
+languageCode = "en-us"
+# Enable comments by entering your Disqus shortname
+disqusShortname = "toamitkumar-in"
+googleAnalytics = ""
+preserveTaxonomyNames = true
+paginate = 5 #frontpage pagination
+
+[outputs]
+home = ["HTML", "RSS", "Algolia"]
+
+[params]
+  header_image = "img/home-bg.jpg"
+  SEOTitle = "toamitkumar's Blog"
+  description = "Opinions expressed here are my own and do not reflect those of my employer"
+  keyword = "amit kumar, amitkumar, toamitkumar, Amit Kumar Blog, PaaS, Engineering, Engineering Excellence, Microservice, Digital Transformation, Cloud Computing, API Ecosystem, Agile, Conference speaking, DevOps, IaaC, IaaS"
+  slogan = "Opinions expressed here are my own and do not reflect those of my employer"
+
+  image_404 = "img/404-bg.jpg"
+  title_404 = "Can't find what you're looking :("
+  omit_categories = false
+
+  # leancloud storage for page view counter
+  page_view_conter = false 
+  leancloud_app_id = ""
+  leancloud_app_key = ""
+
+  # algolia site search
+  algolia_search = true
+  algolia_appId = ""
+  algolia_indexName = ""
+  algolia_apiKey = ""
+
+  # Sidebar settings
+  sidebar_about_description = "Technology Leader - Financial Services at DKatalis| Ex-GoJek | Ex-McKinsey | Agile Craftsperson | Co-Founder"
+  sidebar_avatar = "img/black-n-white-headshot.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+  #featured_tags = true 
+  featured_condition_size = 1 
+
+  # Baidu Analytics
+  ba_track_id = ""
+  
+  #friends = true
+  bookmarks = false
+  about_me = true
+
+  # Include any custom CSS and/or JS files, url or relative to /static folder
+  #custom_css = ["css/lightbox.css", "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css", "css/main.css"]
+  #custom_js = ["js/lightbox.js", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", "js/main.js"]
+
+  [params.social]
+  rss            = true 
+  email          = "toamitkumar@gmail.com"
+  twitter       = "https://twitter.com/toamit"
+  linkedin       = "https://www.linkedin.com/in/toamitkumar"
+  #stackoverflow  = "https://stackoverflow.com/users/yourstackoverflowid"
+  #instagram     = "full profile url in instagram"
+  github         = "https://github.com/toamitkumar"
+  medium         = "https://toamitkumar.medium.com"
+  #pinterest     = "full profile url in pinterest"
+  #reddit        = "full profile url in reddit"
+  #gitlab        = "full profile url in gitlab"
+  #mastodon      = "full profile url in mastodon"
+  #keybase       = "full profile url in keybase"
+  #git           = "full profile url for git user"
+  
+  #[[params.friend_link]]
+  #title = ""
+  #href =  ""
+
+  [[params.bookmark_link]]
+  title =  "Martin Fowler"
+  href =  "https://martinfowler.com"
+  [[params.bookmark_link]]
+  title = "ServiceMesher"
+  href =  "http://www.servicemesher.com"
+  [[params.bookmark_link]]
+  title =  "Pxhere"
+  href = "https://pxhere.com"
+  [[params.bookmark_link]]
+  title = "unsplash"
+  href = "https://unsplash.com"
+  
+  #[[params.addtional_menus]]
+  #title =  "BOOKS"
+  #href =  "/top/books/"
+  [[params.addtional_menus]]
+  title =  "Community"
+  href =  "/top/community/"
+  [[params.addtional_menus]]
+  title =  "SPEAKING"
+  href =  "/top/speaking/"
+  [[params.addtional_menus]]
+  title =  "ABOUT"
+  href =  "/top/about/"
+
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+
+[params.algolia]
+vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
+params = ["categories", "tags"] 
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 2
+    startLevel = 1
+  [markup.highlight]
+    style = "dracula"
