@@ -3,7 +3,7 @@ showonlyimage: true
 title:      "Agility and Component Driven Development"
 subtitle:   ""
 excerpt: "iterative, self-evolving incremental development that demands high collaboration and flexibility to change"
-description: "iterative, self-evolving incremental development that demands high collaboration and flexibility to change"
+description: ""
 date:       2012-05-30
 author:    Amit Kumar
 image: "img/home-bg.jpg"

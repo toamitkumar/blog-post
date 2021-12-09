@@ -1,9 +1,9 @@
 ---
 showonlyimage: true
 title:      "Re-Engineer v/s Rewrite"
-subtitle:   ""
+subtitle:   "A tale of choices you have to make when taking a decision"
 excerpt: "A tale of choices you have to make when taking a decision"
-description: "A tale of choices you have to make when taking a decision"
+description: ""
 date:       2021-11-24
 author: Amit Kumar
 image: "img/reengineer-rewrite.jpg"

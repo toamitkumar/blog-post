@@ -1,9 +1,9 @@
 ---
 showonlyimage: true
 title:      "Managing multiple SSH Keys with Github & Gitlab"
-subtitle:   ""
+subtitle:   "SSH Keys - multiple GitHub account, Gitlab accounts"
 excerpt: "SSH Keys - multiple GitHub account, Gitlab accounts"
-description: "SSH Keys - multiple GitHub account, Gitlab accounts"
+description: ""
 date:       2012-08-05
 author:    Amit Kumar
 image: "img/home-bg.jpg"

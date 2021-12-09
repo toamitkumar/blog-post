@@ -3,7 +3,7 @@ showonlyimage: true
 title:      "My Impression at #inspect2013 - RubyMotion Conference"
 subtitle:   ""
 excerpt: "First RubyMotion comference - observation, community contribution, trends, reactions"
-description: "First RubyMotion comference - observation, community contribution, trends, reactions"
+description: ""
 date:       2012-05-30
 author:    Amit Kumar
 image: "img/guard-rail-autonomy-1.jpg"

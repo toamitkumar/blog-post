@@ -1,9 +1,9 @@
 ---
 showonlyimage: true
 title:      "Guardrail-ed Autonomy"
-subtitle:   ""
+subtitle:   "Instill gurad-rails for team autonomy"
 excerpt: "Instill gurad-rails for team autonomy"
-description: "Instill gurad-rails for team autonomy"
+description: ""
 date:       2021-01-30
 author:    Amit Kumar
 image: "img/guard-rail-autonomy.jpg"
