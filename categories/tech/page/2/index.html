@@ -7,17 +7,17 @@
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://toamitkumar.github.io/img/home-bg.jpg">
 <meta property="twitter:image" content="https://toamitkumar.github.io/img/home-bg.jpg">
-<meta name=title content="Managing multiple SSH Keys with Github & Gitlab">
-<meta property="og:title" content="Managing multiple SSH Keys with Github & Gitlab">
-<meta property="twitter:title" content="Managing multiple SSH Keys with Github & Gitlab">
+<meta name=title content="Tech">
+<meta property="og:title" content="Tech">
+<meta property="twitter:title" content="Tech">
 <meta name=description content="Opinions expressed here are my own and do not reflect those of my employer">
 <meta property="og:description" content="Opinions expressed here are my own and do not reflect those of my employer">
 <meta property="twitter:description" content="Opinions expressed here are my own and do not reflect those of my employer">
 <meta property="twitter:card" content="summary">
 <meta name=keyword content="amit kumar, amitkumar, toamitkumar, Amit Kumar Blog, PaaS, Engineering, Engineering Excellence, Microservice, Digital Transformation, Cloud Computing, API Ecosystem, Agile, Conference speaking, DevOps, IaaC, IaaS">
 <link rel="shortcut icon" href=/img/favicon.ico>
-<title>Managing multiple SSH Keys with Github & Gitlab-toamitkumar's Blog</title>
-<link rel=canonical href=/2012/08/05/manage-multiple-ssh-github-gitlab/>
+<title>Tech-toamitkumar's Blog</title>
+<link rel=canonical href=/categories/tech/>
 <link rel=stylesheet href=/css/iDisqus.min.css>
 <link rel=stylesheet href=/css/bootstrap.min.css>
 <link rel=stylesheet href=/css/hugo-theme-cleanwhite.min.css>
@@ -63,152 +63,115 @@
 </div>
 </nav>
 <script>var $body=document.body,$toggle=document.querySelector('.navbar-toggle'),$navbar=document.querySelector('#huxblog_navbar'),$collapse=document.querySelector('.navbar-collapse');$toggle.addEventListener('click',handleMagic);function handleMagic(a){$navbar.className.indexOf('in')>0?($navbar.className=" ",setTimeout(function(){$navbar.className.indexOf('in')<0&&($collapse.style.height="0px")},400)):($collapse.style.height="auto",$navbar.className+=" in")}</script>
-<style type=text/css>header.intro-header{background-image:url(/img/home-bg.jpg)}</style>
-<header class=intro-header>
+<header class=intro-header style=background-image:url(/img/home-bg.jpg)>
 <div class=container>
 <div class=row>
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<div class=post-heading>
-<div class=tags>
-<a class=tag href=/tags/multiple-ssh-keys title="multiple SSH keys">
-multiple SSH keys
-</a>
-<a class=tag href=/tags/github title=github>
-github
-</a>
-<a class=tag href=/tags/gitlab title=gitlab>
-gitlab
-</a>
-<a class=tag href=/tags/ssh title=SSH>
-SSH
-</a>
-<a class=tag href=/tags/ssh-config title="SSH Config">
-SSH Config
-</a>
-</div>
-<h1>Managing multiple SSH Keys with Github & Gitlab</h1>
-<h2 class=subheading>SSH Keys - multiple GitHub account, Gitlab accounts</h2>
-<span class=meta>
-Posted by
-Amit Kumar
-on
-Sunday, August 5, 2012
-</span>
+<div class=site-heading>
+<h1>Amit Kumar </h1>
+<span class=subheading>Opinions expressed here are my own and do not reflect those of my employer</span>
 </div>
 </div>
 </div>
 </div>
 </header>
-<article>
 <div class=container>
 <div class=row>
-<div class="col-lg-8 col-lg-offset-2
-col-md-10 col-md-offset-1
+<div class="col-lg-8 col-lg-offset-1
+col-md-8 col-md-offset-1
+col-sm-12
+col-xs-12
 post-container">
-<p>I have always stumbled on this problem of managing SSH keys for multiple Git based SCM (Gitlab, GitHub) including multiple GitHub accounts.</p>
-<p>If you&rsquo;ve single account - adding the <a href=https://help.github.com/articles/generating-ssh-keys>SSH keys</a> on your github or gitlab is simple.</p>
-<p>I currently have the following accounts:</p>
-<h6 id=github>Github</h6>
-<blockquote>
-<ul>
-<li>1 personal account</li>
-<li>2 behind the firewall (corporate accounts)</li>
-</ul>
-</blockquote>
-<h6 id=gitlab>Gitlab</h6>
-<blockquote>
-<ul>
-<li>1 personal account</li>
-<li>1 corporate account</li>
-</ul>
-</blockquote>
-<p>If ever face a problem like this, it is best to create a <code>ssh-config</code> file which aggregates all your SSH keys. You must follow the steps below:</p>
-<h5 id=1-generate-ssh-keys-for-each-account-and-give-a-name-accordingly>1. Generate SSH keys for each account and give a name accordingly</h5>
-<p>Follow the command below to generate SSH keys for each account on GitHub or Gitlab</p>
-<pre tabindex=0><code>cd ~/.ssh
-ssh-keygen -t rsa -C &quot;your-email@abc.com&quot; -f ~/.ssh/id_rsa_account-1-github
-ssh-keygen -t rsa -C &quot;your-email@abc.com&quot; -f ~/.ssh/id_rsa_account-2-github
-
-ssh-keygen -t rsa -C &quot;your-email@abc.com&quot; -f ~/.ssh/id_rsa_account-1-gitlab
-ssh-keygen -t rsa -C &quot;your-email@abc.com&quot; -f ~/.ssh/id_rsa_account-2-gitlab
-</code></pre><p>This should produce multiple pairs of private and public keys:</p>
-<pre tabindex=0><code>- id_rsa_account-1-github
-- id_rsa_account-1-github.pub
-
-- id_rsa_account-2-github
-- id_rsa_account-2-github.pub
-.....
-</code></pre><h5 id=2-add-the-public-key-to-the-respective-account-on-github-or-gitlab>2. Add the public key to the respective account on GitHub or Gitlab</h5>
-<p>Copy the text under each public key and paste them content for each account on GitHub & Gitlab (this should be easy)</p>
-<h5 id=3-create-and-map-the-keys-in-a-config-file>3. Create and map the keys in a Config file</h5>
-<p>Next create a <code>config</code> file under <code>~/.ssh</code> directory with the following content:</p>
-<pre tabindex=0><code>Host github.com
-  User git
-  Port 22
-  Hostname github.com
-  IdentityFile ~/.ssh/id_rsa_account-1-github
-  TCPKeepAlive yes
-  IdentitiesOnly yes
-  Hostname github.com
-  IdentityFile ~/.ssh/id_rsa_account-2-github
-
-Host gitlab.com
-  User git
-  Port 22
-  Hostname gitlab.com
-  IdentityFile ~/.ssh/id_rsa_account-1-gitlab
-  TCPKeepAlive yes
-  IdentitiesOnly yes
-  Hostname gitlab.com
-  IdentityFile ~/.ssh/id_rsa_account-2-gitlab
-</code></pre><p>Let&rsquo;s validate the settings through a quick CLI:</p>
-<pre tabindex=0><code>ssh -vT git@github.com
-</code></pre><p>You should get a verbose output with successful autheticated message:</p>
-<pre tabindex=0><code>Hi &lt;user account&gt;! You've successfully authenticated, but GitHub does not provide shell access.
-</code></pre><p>Hope it helps!</p>
+<div class=post-preview>
+<a href=https://toamitkumar.github.io/2013/04/09/ruby-motion-conference/>
+<h2 class=post-title>
+My Impression at #inspect2013 - RubyMotion Conference
+</h2>
+<div class=post-content-preview>
+The first RubyMotion Conference #inspect2013 happened in Brussels, Belgium. It was a very well organized conference, lots of talented people, awesome speakers, good food and yes Belgian Beer
+Many thanks to Laurent Sansonetti (@lrz) for organizing the first RM conference.
+The general gist of what happened there. Below are my observations and opinions.
+What I saw at #inspect2013 - RubyMotion conference? For people who don’t know about RubyMotion:
+About RubyMotion http://rubysource.
+</div>
+</a>
+<p class=post-meta>
+Posted byAmit Kumar Wednesday, May 30, 2012
+</p>
+</div>
 <hr>
 <ul class=pager>
 <li class=previous>
-<a href=/2012/05/30/guardrail-ed-autonomy/ data-toggle=tooltip data-placement=top title="Agility and Component Driven Development">&larr;
-Previous Post</a>
-</li>
-<li class=next>
-<a href=/2021/01/30/guardrail-ed-autonomy/ data-toggle=tooltip data-placement=top title="Guardrail-ed Autonomy">Next
-Post &rarr;</a>
+<a href=/categories/tech/>&larr; Newer Posts</a>
 </li>
 </ul>
-<div id=disqus-comment></div>
-<div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//toamitkumar-in.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
 </div>
-<div class="col-lg-2 col-lg-offset-0
-visible-lg-block
-sidebar-container
-catalog-container">
-<div class=side-catalog>
-<hr class="hidden-sm hidden-xs">
-<h5>
-<a class=catalog-toggle href=#>CATALOG</a>
-</h5>
-<ul class=catalog-body></ul>
-</div>
-</div>
-<div class="col-lg-11 col-lg-offset-1
-col-md-10 col-md-offset-1
+<div class="col-lg-3 col-lg-offset-0
+col-md-3 col-md-offset-0
+col-sm-12
+col-xs-12
 sidebar-container">
+<section class="visible-md visible-lg">
+<hr><h5><a href=/top/about>ABOUT ME</a></h5>
+<div class=short-about>
+<a href=/top/about>
+<img src=/img/black-n-white-headshot.jpg alt=avatar style=cursor:pointer>
+</a>
+<p>Technology Leader - Financial Services at DKatalis| Ex-GoJek | Ex-McKinsey | Agile Craftsperson | Co-Founder</p>
+<ul class=list-inline>
+<li>
+<a href=/categories/tech/index.xml rel=alternate type=application/rss+xml title="Amit Kumar">
+<span class="fa-stack fa-lg">
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/toamit>
+<span class="fa-stack fa-lg">
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a target=_blank href=https://github.com/toamitkumar>
+<span class="fa-stack fa-lg">
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-github fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a target=_blank href=https://www.linkedin.com/in/toamitkumar>
+<span class="fa-stack fa-lg">
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a target=_blank href=https://toamitkumar.medium.com>
+<span class="fa-stack fa-lg">
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-medium fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+</ul>
+</div>
+</section>
 </div>
 </div>
 </div>
-</article>
 <footer>
 <div class=container>
 <div class=row>
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 <ul class="list-inline text-center">
 <li>
-<a href rel=alternate type=application/rss+xml title="Amit Kumar">
+<a href=/categories/tech/index.xml rel=alternate type=application/rss+xml title="Amit Kumar">
 <span class="fa-stack fa-lg">
 <i class="fas fa-circle fa-stack-2x"></i>
 <i class="fas fa-rss fa-stack-1x fa-inverse"></i>

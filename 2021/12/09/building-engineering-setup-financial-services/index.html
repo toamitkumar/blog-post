@@ -10,19 +10,20 @@
 <meta name=title content="Building an Engineering setup in Financial Services">
 <meta property="og:title" content="Building an Engineering setup in Financial Services">
 <meta property="twitter:title" content="Building an Engineering setup in Financial Services">
-<meta name=description content="A series of 5 posts describing the journey to build Product & Engineering for Financial Services">
-<meta property="og:description" content="A series of 5 posts describing the journey to build Product & Engineering for Financial Services">
-<meta property="twitter:description" content="A series of 5 posts describing the journey to build Product & Engineering for Financial Services">
+<meta name=description content="Opinions expressed here are my own and do not reflect those of my employer">
+<meta property="og:description" content="Opinions expressed here are my own and do not reflect those of my employer">
+<meta property="twitter:description" content="Opinions expressed here are my own and do not reflect those of my employer">
 <meta property="twitter:card" content="summary">
 <meta name=keyword content="amit kumar, amitkumar, toamitkumar, Amit Kumar Blog, PaaS, Engineering, Engineering Excellence, Microservice, Digital Transformation, Cloud Computing, API Ecosystem, Agile, Conference speaking, DevOps, IaaC, IaaS">
 <link rel="shortcut icon" href=/img/favicon.ico>
 <title>Building an Engineering setup in Financial Services-toamitkumar's Blog</title>
-<link rel=canonical href=/2021/12/02/building-engineering-setup-financial-services/>
+<link rel=canonical href=/2021/12/09/building-engineering-setup-financial-services/>
 <link rel=stylesheet href=/css/iDisqus.min.css>
 <link rel=stylesheet href=/css/bootstrap.min.css>
 <link rel=stylesheet href=/css/hugo-theme-cleanwhite.min.css>
 <link rel=stylesheet href=/css/zanshang.css>
 <link href=//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css rel=stylesheet type=text/css>
+<link rel=stylesheet href=https://toamitkumar.github.io/stylesheets/overwrite.css>
 <script src=/js/jquery.min.js></script>
 <script src=/js/bootstrap.min.js></script>
 <script src=/js/hux-blog.min.js></script>
@@ -89,12 +90,12 @@ platform engineering
 </a>
 </div>
 <h1>Building an Engineering setup in Financial Services</h1>
-<h2 class=subheading></h2>
+<h2 class=subheading>A series of 5 posts describing the journey to build Product & Engineering for Financial Services</h2>
 <span class=meta>
 Posted by
 Amit Kumar
 on
-Thursday, December 2, 2021
+Thursday, December 9, 2021
 </span>
 </div>
 </div>
@@ -108,30 +109,41 @@ Thursday, December 2, 2021
 col-md-10 col-md-offset-1
 post-container">
 <p>I have been part of building Product & Engineering teams and Digital Transformation setup for almost more than a decade.</p>
-<p>My first experience was during the build of MDL (McKinsey Digital Labs) by our leaders: <a href=https://www.linkedin.com/in/sattybhens rel=noopener target=_blank>Satty Bhens</a> and <a href=https://www.linkedin.com/in/bijubhaskar/ rel=noopener target=_blank>Biju Bhaskar</a>.
-They both are strong believers of garage-like setup and gave full support to establish guard-rails in protecting the culture.
-We built a solid team of 150+ engineers globally following <a href=https://en.wikipedia.org/wiki/Spoke%E2%80%93hub_distribution_paradigm rel=noopener target=_blank>hubs-spokes</a> model knitted together with an Engineering Mindset & connected via various communication tools.</p>
+<p>My first experience was during the build of MDL (McKinsey Digital Labs) by our leaders: <a href=https://www.linkedin.com/in/sattybhens rel=noopener target=_blank>Satty Bhens</a> and <a href=https://www.linkedin.com/in/bijubhaskar/ rel=noopener target=_blank>Biju Bhaskar</a> - a startup like setup (for both engineering setup and business building) inside a large organisation.
+They both are strong believers of garage-like setup and gave full support to establish guard-rails in protecting the culture of working like a startup.
+Together, we built a solid team of 150+ engineers globally following <a href=https://en.wikipedia.org/wiki/Spoke%E2%80%93hub_distribution_paradigm rel=noopener target=_blank>hubs-spokes</a> model knitted together with an <strong>Engineering Mindset</strong> & connected via various communication tools.</p>
+<h3 id=last-life>Last life</h3>
 <p>In my last journey, I have been part of Digital Transformation for <a href=https://www.btpn.com/en rel=noopener target=_blank>Bank BTPN</a>.
-The whole transformation (Technology, Agile & People) journey in the bank is a long story <em>for another post</em>. But, it was great to replicate building a garage-like-setup (although it was not a global setup) - ring-fenced teams dedicated for each digital product offerings in the bank. Core principles of an Engineering setup - customer journey focussed squads, development practices,</p>
+The whole transformation (Technology, Agile & People) journey in the bank is a long story <strong><em>for another post</em></strong>. But, it was great to <strong>replicate building a garage-like-setup</strong> (although it was not a global setup) - with ring-fenced teams dedicated for each digital product offerings in the bank. The setup was driven by guiding principles: customer focussed squads, solid development practices for building product, devops mindset, infrastructure as a service (with IAC), observability enabled systems, to name a few.</p>
 <p>From an Engineering lens, during this journey, we faced many challenges (nothing surprising), describing a few:</p>
 <ul>
-<li>attracting and retaining <a href=https://www.gartner.com/en/human-resources/insights/talent-in-digital><strong>digital talent</strong></a> to work in a bank is challenging. Majority of them enjoy working with Fintechs or other start-ups</li>
-<li>implementing engineering innovation within boundaries of a bank (<em>a highly regulated entity</em>) is challenging. Simple things like automated deployment (<em>without manual intervention</em>) requires compliance/regulatory approvals or using monitoring tools like NewRelic required a lot of back-n-forth (cloud or cloud based SaaS in a bank is a NO-NO)</li>
-<li>infrastructure (bare metal) becomes hinderance for rapid scale. You need native cloud setup to enable Infrastructure scale with flexible cost. <a href=https://aws.amazon.com/outposts/ rel=noopener target=_blank>Outpost (AWS)</a>, <a href=https://aws.amazon.com/outposts/ rel=noopener target=_blank>Anthos (GCP)</a>, <a href=https://aws.amazon.com/outposts/ rel=noopener target=_blank>Stack (Azure)</a> are good solutions in this direction. <em>We used Openshift for a cloud native setup - story for another day</em></li>
+<li>attracting and retaining <a href=https://www.gartner.com/en/human-resources/insights/talent-in-digital><strong>digital talent</strong></a> to work in a bank is challenging. Majority of them enjoy working with Fintechs or start-ups</li>
+<li>implementing engineering innovation within boundaries of a bank (<em>a highly regulated entity</em>) is challenging. Simple things like automated deployment (<em>without manual intervention</em>) requires compliance/regulatory approvals or using monitoring tools like NewRelic required a lot of back-n-forth (not to mention cloud or cloud based SaaS providers)</li>
+<li>infrastructure (bare metal) becomes hinderance for rapid scale. You need native cloud setup to enable Infrastructure scale with flexible cost. <em>We used Openshift for a cloud native setup - story for another day</em>. <a href=https://aws.amazon.com/outposts/ rel=noopener target=_blank>Outpost (AWS)</a>, <a href=https://aws.amazon.com/outposts/ rel=noopener target=_blank>Anthos (GCP)</a>, <a href=https://aws.amazon.com/outposts/ rel=noopener target=_blank>Stack (Azure)</a> help solve these problems to provide a more cloud friendly environment.</li>
 </ul>
-<p>There are other challenges as well - customer acquisition, GTM strategy, regional growth, to name a few&mldr; hence, in the new journey of building a technology based Financial Services - <a href=https://dkatalis.co rel=noopener target=_blank>DKatalis</a> (Digital Katalis, Katalis is a Sanskrit word which means Catalyst), we setup as an Engineering organisation to provide services to a Bank (in Jakarta, Indonesia). I am writing down a series of posts that explains the journey of building Product & Engineering setup outside (or at arms-length) from the highly regulated entity.</p>
+<p>There were other challenges as well - customer acquisition, GTM strategy, regional growth, to name a few&mldr;</p>
+<h3 id=what-i-am-doing-now>What I am doing now</h3>
+<p>Hence, in the new journey of building a technology based Financial Services - <a href=https://dkatalis.co rel=noopener target=_blank>DKatalis</a> (Digital Katalis, Katalis is a Sanskrit word which means Catalyst), we leaped to set an Engineering organisation that would provide services to a Bank (in Jakarta, Indonesia).</p>
+<p>I am writing down a series of posts explaining various aspects of the journey in building Product & Engineering setup outside (or at arms-length) from the highly regulated entity.</p>
 <p>The posts covers:</p>
-<h4 id=1-engineering-team--practices>1. Engineering team & practices</h4>
-<h4 id=2-technology-choices-and-architectural-setup>2. Technology choices and architectural setup</h4>
-<h4 id=3-infrastructure>3. Infrastructure</h4>
-<h4 id=4-operations---keep-the-lights-on-aka-devops>4. Operations - keep the lights ON aka DevOps</h4>
-<h4 id=5-platform-engineering>5. Platform Engineering</h4>
+<ul>
+<li><a href=/2021/12/07/building-and-scaling-engineering-team/>Building and scaling Engineering team</a>: Principles and practices adopted to build the product and engineering team</li>
+<li><em>Technology choices & Engineering practices</em>: We took an outward-in approach to establish the foundation of technology stack, architecture/ design choices & engineering practices</li>
+<li><em>Infrastructure</em>: The core principle was IAC (Infrastructure as Code). We built service oriented structure with Infrastructure as Service</li>
+<li><em>Operations - keep the lights ON aka DevOps</em>: Tranditionally, financial services have a dedicated operations team. Following DevOps principle, we followed &ndash; <em>You build it, you run it!</em></li>
+<li><em>Platform Engineering</em>: A team responsible for engineering tools, cross-cutting-concerns, devops process including SRE. Provide platform-as-service to internal product team.</li>
+</ul>
+<hr>
 <p>It will be great to hear your thoughts, ideas - if you&rsquo;ve been on a similar journey.</p>
 <hr>
 <ul class=pager>
 <li class=previous>
 <a href=/2021/11/24/reengineer-vs-rewrite/ data-toggle=tooltip data-placement=top title="Re-Engineer v/s Rewrite">&larr;
 Previous Post</a>
+</li>
+<li class=next>
+<a href=/2021/12/09/building-and-scaling-engineering-team/ data-toggle=tooltip data-placement=top title="Building & scaling Engineering team">Next
+Post &rarr;</a>
 </li>
 </ul>
 <div id=disqus-comment></div>

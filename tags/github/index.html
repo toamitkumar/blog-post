@@ -23,6 +23,7 @@
 <link rel=stylesheet href=/css/hugo-theme-cleanwhite.min.css>
 <link rel=stylesheet href=/css/zanshang.css>
 <link href=//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css rel=stylesheet type=text/css>
+<link rel=stylesheet href=https://toamitkumar.github.io/stylesheets/overwrite.css>
 <script src=/js/jquery.min.js></script>
 <script src=/js/bootstrap.min.js></script>
 <script src=/js/hux-blog.min.js></script>
@@ -86,8 +87,14 @@ post-container">
 <h2 class=post-title>
 Managing multiple SSH Keys with Github & Gitlab
 </h2>
-<div class=post-content-preview>
+<h3 class=post-subtitle>
 SSH Keys - multiple GitHub account, Gitlab accounts
+</h3>
+<div class=post-content-preview>
+I have always stumbled on this problem of managing SSH keys for multiple Git based SCM (Gitlab, GitHub) including multiple GitHub accounts.
+If you&rsquo;ve single account - adding the SSH keys on your github or gitlab is simple.
+I currently have the following accounts:
+Github 1 personal account 2 behind the firewall (corporate accounts) Gitlab 1 personal account 1 corporate account If ever face a problem like this, it is best to create a ssh-config file which aggregates all your SSH keys.
 </div>
 </a>
 <p class=post-meta>
