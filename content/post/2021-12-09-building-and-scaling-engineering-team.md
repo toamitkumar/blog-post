@@ -21,7 +21,7 @@ categories: [ Tech ]
 URL: "/2021/12/09/building-and-scaling-engineering-team/"
 ---
 
-The first batch of the series of 5 blog posts describing the journey to build an Engineering setup in Financial Services. Read the [preface](/2021/12/02/building-engineering-setup-financial-services/) to get a clear context of the journey.
+The first batch of the series of 5 blog posts describing the journey to build an Engineering setup in Financial Services. Read the [preface](/2021/12/09/building-engineering-setup-financial-services/) to get a clear context of the journey.
 
 - **Building and scaling Engineering team**: Principles and practices adopted to build the product and engineering team
 - _Technology choices & Engineering practices_: We took an outward-in approach to establish the foundation of technology stack, architecture/ design choices & engineering practices
