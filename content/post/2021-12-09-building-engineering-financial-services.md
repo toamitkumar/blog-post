@@ -47,7 +47,7 @@ I am writing down a series of posts explaining various aspects of the journey in
 
 The posts covers:
 
-- [Building and scaling Engineering team](/2021/12/07/building-and-scaling-engineering-team/): Principles and practices adopted to build the product and engineering team
+- [Building and scaling Engineering team](/2021/12/09/building-and-scaling-engineering-team/): Principles and practices adopted to build the product and engineering team
 - _Technology choices & Engineering practices_: We took an outward-in approach to establish the foundation of technology stack, architecture/  design choices & engineering practices
 - _Infrastructure_: The core principle was IAC (Infrastructure as Code). We built service oriented structure with Infrastructure as Service
 - _Operations - keep the lights ON aka DevOps_: Tranditionally, financial services have a dedicated operations team. Following DevOps principle, we followed -- _You build it, you run it!_
