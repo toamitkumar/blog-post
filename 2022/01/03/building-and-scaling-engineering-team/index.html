@@ -10,14 +10,14 @@
 <meta name=title content="Building & scaling Engineering team">
 <meta property="og:title" content="Building & scaling Engineering team">
 <meta property="twitter:title" content="Building & scaling Engineering team">
-<meta name=description content="First batch of the series of 5 posts describing the journey to build Product & Engineering for Financial Services">
-<meta property="og:description" content="First batch of the series of 5 posts describing the journey to build Product & Engineering for Financial Services">
-<meta property="twitter:description" content="First batch of the series of 5 posts describing the journey to build Product & Engineering for Financial Services">
+<meta name=description content="First article of the series of 5 posts describing the journey to build Product & Engineering for Financial Services">
+<meta property="og:description" content="First article of the series of 5 posts describing the journey to build Product & Engineering for Financial Services">
+<meta property="twitter:description" content="First article of the series of 5 posts describing the journey to build Product & Engineering for Financial Services">
 <meta property="twitter:card" content="summary">
 <meta name=keyword content="amit kumar, amitkumar, toamitkumar, Amit Kumar Blog, PaaS, Engineering, Engineering Excellence, Microservice, Digital Transformation, Cloud Computing, API Ecosystem, Agile, Conference speaking, DevOps, IaaC, IaaS">
 <link rel="shortcut icon" href=/img/favicon.ico>
-<title>Building & scaling Engineering team-toamitkumar's Blog, Engineering Excellence, software architecture, Technology Incubation, PaaS, Microservice, Digital Transformation, Cloud Computing, API Ecosystem, Agile, Conference speaking, DevOps, IaaC, IaaS</title>
-<link rel=canonical href=/2021/12/09/building-and-scaling-engineering-team/>
+<title>Building & scaling Engineering team-toamitkumar's Blog, Engineering Excellence, software architecture, Technology Incubation, PaaS, Microservice, Digital Transformation, Cloud Computing, API Ecosystem, Agile, Conference speaking, DevOps, IAC, IaaS</title>
+<link rel=canonical href=/2022/01/03/building-and-scaling-engineering-team/>
 <link rel=stylesheet href=/css/iDisqus.min.css>
 <link rel=stylesheet href=/css/bootstrap.min.css>
 <link rel=stylesheet href=/css/hugo-theme-cleanwhite.min.css>
@@ -95,7 +95,7 @@ platform engineering
 Posted by
 Amit Kumar
 on
-Thursday, December 9, 2021
+Monday, January 3, 2022
 </span>
 </div>
 </div>
@@ -108,56 +108,54 @@ Thursday, December 9, 2021
 <div class="col-lg-8 col-lg-offset-2
 col-md-10 col-md-offset-1
 post-container">
-<p>The first batch of the series of 5 blog posts describing the journey to build an Engineering setup in Financial Services. Read the <a href=/2021/12/09/building-engineering-setup-financial-services/>preface</a> to get a clear context of the journey.</p>
+<p>The first article of the series of 5 blog posts describing the journey to build an Engineering setup in Financial Services. Read the <a href=/2022/01/02/building-engineering-setup-financial-services/>preface</a> to get a clear context of the journey.</p>
 <ul>
 <li><strong>Building and scaling Engineering team</strong>: Principles and practices adopted to build the product and engineering team</li>
-<li><em>Technology choices & Engineering practices</em>: We took an outward-in approach to establish the foundation of technology stack, architecture/ design choices & engineering practices</li>
+<li><a href=/2022/01/04/technology-choice-and-engineering-practices/>Technology choices & Engineering practices</a>: We took an outward-in approach to establish the foundation of technology stack, architecture/ design choices & engineering practices</li>
+<li><a href=/2022/01/05/platform-engineering/>Platform Engineering</a>: A team responsible for architecture reference, engineering tools/ practices, cross-cutting-concerns, Devops processes, playbooks. Provide platform-as-service to the internal product team.</li>
 <li><em>Infrastructure</em>: The core principle was IAC (Infrastructure as Code). We built a service-oriented structure with Infrastructure as Service</li>
 <li><em>Operations - keep the lights ON aka DevOps</em>: Traditionally, financial services have a dedicated operations team. Following DevOps principle, we followed &ndash; <em>You build it, you run it!</em></li>
-<li><em>Platform Engineering</em>: A team responsible for engineering tools, cross-cutting-concerns, devops process including SRE. Provide platform-as-service to the internal product team.</li>
 </ul>
 <hr>
 <h2 id=how-we-started>How we started</h2>
-<p><a href=https://dkatalis.co rel=noopener target=_blank>DKatalis</a> is an engineering setup. Our tech stack is on the bleeding edge for a Financial services - <a href=https://flutter.dev/ rel=noopener target=_blank>Dart (Flutter)</a> for FE, server-side JS (NodeJS) for BE, Kafka (service communication and data streams), APIGW (Tyk), MongoDB, Redis, CloudFlare, ELK, Dynatrace & Solarwinds, Terraform (IAC) & full cloud setup to just name a few.</p>
-<p>Starting to build a team without a brand name is challenging, it starts with your network and expands to layers beyond. Add to it, the bleeding edge of technology (especially Flutter, we couldn&rsquo;t find experienced developers in the region, more on this further), making it even hard to build the team.</p>
-<blockquote>
-<p>As the <a href=https://hbr.org/sponsored/2017/10/guiding-principles-for-closing-the-gap-between-strategy-design-and-delivery rel=noopener target=_blank>HBR post</a> explains, guiding principles are extremely important to make sure you have a reference point always during execution.</p>
-</blockquote>
-<p>Hence, the first step for us was to have guiding principles which will be used to build the team. With help from <a href=https://www.linkedin.com/in/maya-kartika-52b2a2131/ rel=noopener target=_blank>Maya Kartika</a> (our Head of People) & <a href=https://www.linkedin.com/in/vincentius-ivan-9858581b/ rel=noopener target=_blank>Ivan Vincentius</a> (Head of Jakarta Hub), we came up with the following principles:</p>
+<p><a href=https://dkatalis.co rel=noopener target=_blank>DKatalis</a> is an engineering setup and hence, we had our tech stack on the bleeding edge for a Financial services - <a href=https://flutter.dev/ rel=noopener target=_blank>Dart (Flutter)</a> for FE, server-side JS (NodeJS) for BE, Kafka (service communication and data streams), APIGW (Tyk), MongoDB, Redis, CloudFlare, ELK, Dynatrace & Solarwinds, Terraform (IAC) & full cloud setup to just name a few.</p>
+<p>Starting to build a team without a brand name is challenging, it starts with your network and expands to layers beyond. Add to it, the bleeding edge of technology (especially Flutter, we couldn&rsquo;t find experienced engineers in the region, more on this later), making it even hard to build the team.</p>
+<p>As explained in the <a href=/2022/01/02/building-engineering-setup-financial-services/#what-i-have-been-doing>preface</a>, guiding principles are important.
+Hence, the first step for us was to have guiding principles which will be used to build the team. With help from <a href=https://www.linkedin.com/in/maya-kartika-52b2a2131/ rel=noopener target=_blank>Maya Kartika</a> (our Head of People) & <a href=https://www.linkedin.com/in/vincentius-ivan-9858581b/ rel=noopener target=_blank>Ivan Vincentius</a> (Head of Jakarta Hub), we came up with the following principles:</p>
 <h5 id=guiding-principles>Guiding principles:</h5>
 <ul>
 <li>build the team where it is needed</li>
 <li>build the team where talent is available</li>
-<li>responsibilities are more important than a title (senior members will have a broader set of responsibilities)</li>
-<li>build a balanced team (mix of senior, mid-level & juniors). <em>This is still a struggle for us</em></li>
+<li>responsibilities are more important than titles (senior members will have a broader set of responsibilities)</li>
+<li>build a balanced team (mix of senior, mid-level & juniors). <strong><em>This is still a struggle for us</em></strong></li>
 <li>people are assets, invest on them (it&rsquo;s a journey and we are making progress here)</li>
 </ul>
-<p>With the above guiding principles, it was clear, we need to hire engineers outside of <strong>Indonesia</strong> (although our core business team was in Jakarta). We started the process to establish entities across 3 locations: Singapore, Jakarta & Pune. Not going into details of an entity setup, assembling a diverse & geographically distributed team is tough. The first step was to hire a few good tech recruiters and build a network with head hunters. We started with initial 7-8 core members who were tasked to: <strong>build the system foundation and also invest time in hiring</strong>.</p>
-<p>Initially it was slow response but with efforts from our Tech Hub Heads - <a href=https://www.linkedin.com/in/vincentius-ivan-9858581b/ rel=noopener target=_blank>Ivan Vincentius</a> & <a href=https://www.linkedin.com/in/puneet-jain-8133451b rel=noopener target=_blank>Puneet Jain</a> and whole recruitment team, we got good results. We grew from <strong>10-12 members in Oct-Nov'19 to 200+ in Dec'20</strong> across the 3 locations &ndash; Singapore, Jakarta & Pune (as of date we have 300+ across the locations).</p>
+<p>With the above guiding principles, it was clear, we need to hire engineers outside of <strong>Indonesia</strong> (although our core business team was in Jakarta). We started the process to establish entities across 3 locations: Singapore, Jakarta & Pune. Not going into details of an entity setup, assembling a diverse & geographically distributed team is tough. The first step was to hire a few good tech recruiters and build a network with head hunters. We started with initial 7-8 core members who started to: <strong>build the foundation and also invest time in hiring</strong>.</p>
+<p>You need to do early investment to build your <strong>brand equity</strong> - this becomes even more important if your brand is not an established one.
+Initially the slow response was slow but with efforts from our recruiters, engineering staff and our Tech Hub Heads - <a href=https://www.linkedin.com/in/vincentius-ivan-9858581b/ rel=noopener target=_blank>Ivan Vincentius</a> & <a href=https://www.linkedin.com/in/puneet-jain-8133451b rel=noopener target=_blank>Puneet Jain</a>, we got good results. We grew from <strong>10-12 members in Oct-Nov'19 to 200+ in Dec'20</strong> across the 3 locations &ndash; Singapore, Jakarta & Pune (as of date we have 300+ across the locations).</p>
 <h2 id=the-hiring-process>The hiring process</h2>
-<p>One of the fundamental requirements I had put to ourselves (although a challenging one)</p>
+<p>The hiring process should reflect what kinda team you want to build. Going back to our guiding principle, we wanted to have everyone hands-on, this meant,</p>
 <blockquote>
-<p><strong>no matter years of experience, the person must be hands-on</strong> (this is following our guiding principle #3)</p>
+<p><strong>no matter years of experience, every candidate would have to go through a test exercise</strong></p>
 </blockquote>
 <p>Hence, we configured the hiring process to make sure it reflects the type of team we want to build.</p>
-<p><em>(with this, we lost a few senior engineers who were not willing to go through the hands-on exercise part, but, I think, it was worth the push during early foundation months)</em></p>
 <p>
 <figure>
 <img src=/img/hiring-funnel.jpg alt>
 <center><figcaption>Hiring Funnel or Stages</figcaption></center>
 </figure>
 </p>
-<p>The same process was configured for all the roles: <strong>Product Engineers</strong> (Developers and Automation Engineers), <strong>System Engineers</strong> (Infrastructure), <strong>POs</strong>, <strong>Security Engineers</strong>, <strong>Performance specialists</strong>, <strong>Data Engineers</strong>, <strong>Data Science</strong>, <strong>Data Analysts</strong> etc. This helped to keep a consistent hiring process across the organisation. Additionally, it helped propel a culture of roles & responsibilities rather than titles</p>
-<h5 id=guiding-principles-1>Guiding principles</h5>
+<p>The same process was configured for all the roles: <strong>Product Engineers</strong> (Developers and Automation Engineers), <strong>Platform Engineers</strong>, <strong>System Engineers</strong> (Infrastructure), <strong>POs</strong>, <strong>Security Engineers</strong>, <strong>Performance specialists</strong>, <strong>Data Engineers</strong>, <strong>Data Science</strong> & <strong>Data Analysts</strong>. This not only helped to keep a consistent hiring process across the organisation but also in propelling a culture to be driven by responsibilities.</p>
+<h5 id=principles-for-hiring>Principles for hiring</h5>
 <ul>
-<li>Make sure to draft the roles and responsibilities for the profile (aka JOb Description). Confusion there would cost you the recruiter&rsquo;s time.</li>
+<li>Make sure to draft the roles and responsibilities for each profile (aka JOb Description)</li>
 <li>Strictly follow the hiring funnel</li>
-<li>Remove subjectivity from hiring</li>
-<li>If in doubt, reject (letting go someone after hiring will be very expensive)</li>
+<li>Reduce subjectivity in the process</li>
+<li>If in doubt, reject (letting go someone after hiring will be expensive)</li>
 <li>Keep track of the hiring funnel, fine-tune the process</li>
 </ul>
-<p>When you are starting, interviews are the first impression to a candidate (and his network of people) about you and your organisation. Make sure your recruitment team and panelists are <strong>Brand Ambassador</strong> of the company.
-Hence, <strong>Candidate Experience</strong> was the first thing to focus. We documented in detail, each stage of the interview - both recruiters and panelists:</p>
+<p>When you are starting, interviews are the first impression to candidates (and their network of people) about the organisation. Make sure your recruitment team and panelists are <strong>Brand Ambassador</strong> of the company, make <strong>Candidate Experience</strong> as the first thing to focus.</p>
+<p>We did this by reviewing and documenting, each stage of the interview - from recruiters and panelists perspective:</p>
 <ul>
 <li><strong>how to engage with the candidate (outside and during the interview process)</strong>: intros, pitch about ourselves, explain the hiring process, pause between questions and invite them to ask, explain about the assignment and the review process, confirm the role he/she has applied</li>
 <li><strong>scheduling interviews</strong>: recruiter needs to ensure both candidate and panelist are available. They would do an initial intro before the interview starts. If the interview cannot happen, avoid last-minute changes</li>
@@ -165,7 +163,7 @@ Hence, <strong>Candidate Experience</strong> was the first thing to focus. We do
 <li><strong>during interview</strong>: respect interview time window (review the feedbacks from previous stages and prepare), summarise your understanding (don&rsquo;t assume), be aware of your body language (help them succeed)</li>
 <li><strong>after the interview</strong>: fill feedback form with a defined structure, be available to answer queries from the candidate (even if he/she is not selected), take feedback from the candidate, do a panel debrief, if in conflict</li>
 </ul>
-<p>As you grow, the hiring panel starts to broaden and hence, the subjectivity during interviews. Even though, we documented each stage of the interview process, still we started to see subjectivity (or I must say slacks) in hiring - remember we were dealing with hiring at 3 locations. With retro, we found the most challenging stage was code review. Hence, we had to standardise the code review process. Jeevan D C, Ivan V and I, put clear dimensions for code review feedback:</p>
+<p>As you grow, the hiring panel starts to broaden and hence, the subjectivity during interviews. Even though, we documented each stage of the interview process, still we started to see subjectivity (or I must say drop of quality bar) in hiring - remember we were dealing with hiring at 3 locations. With retrospectives, we found one of the most challenging stage was code review. Hence, we standardised the code review process. <a href=https://www.linkedin.com/in/jeevan-d-c/ rel=noopener target=_blank>Jeevan D C</a>, <a href=https://www.linkedin.com/in/vincentius-ivan-9858581b/ rel=noopener target=_blank>Ivan Vincentius</a> and I, put clear dimensions for feedback:</p>
 <ul>
 <li><strong>Code structuring</strong> (Directory structure, First-class objects, Modularity, Design patterns)</li>
 <li><strong>Engineering practices</strong> (Naming conventions, git process/logs, clean coding rules, documentation, tests & coverage)</li>
@@ -181,9 +179,14 @@ Hence, <strong>Candidate Experience</strong> was the first thing to focus. We do
 <img src=/img/hiring-funnel-breakup.jpg alt>
 <center><figcaption>Percent breakdown for each stage</figcaption></center>
 </figure>
-The picture above helped us finding opportunities to improve and fine-tune the hiring process so that we could celebrate successes.</p>
+The picture above helped us finding opportunities to improve and fine-tune the hiring process so that we could celebrate successes.
+Additionally, we defined metrics to keep close track on the hiring funnel</p>
+<blockquote>
+<p><strong>Time to offer &lt; 3 weeks</strong></p>
+</blockquote>
+<p>This metric tracked the time it takes from the first touch-point with the candidate to when offer letter is sent - measuring the time spent during each stage of the interview. We challenged ourselves to complete the process in not more than 3 weeks. Today, this metric measures <strong>22 days</strong> across the location.</p>
 <h2 id=organizing-teams>Organizing teams</h2>
-<p>As you scale from 20-100, organizing an agile team is a fundamental problem everyone starts to face. I have been part of designing and building engineering Org structure at least twice so far (Bank BTPN during IT Transformation & DKatalis as we scaled). Like always, we established important guiding principles as our steer the direction:</p>
+<p>When you&rsquo;re small, everyone does everything, it was the case with us as well. But, as you grow from 20-100, organizing an agile team is a fundamental problem everyone starts to face. I have been part of designing and building engineering Org structure at least twice so far (Bank BTPN during IT Transformation & DKatalis as we scaled). Like always, we established important guiding principles as our steer the direction:</p>
 <ul>
 <li><strong>Reduce silos & increase Communication</strong>: communication plays a fundamental role between squads. As the number of squads increase, communication or alignment between them starts to break. It can be product spec alignment or prioritisation or design decisions or release dependency. Make sure to define processes to have the communication flowing. More the communication, less the silos across squads.</li>
 <li><strong>Decouple Org structure & Career growth</strong>: Typically, the boxes of an org structure are seen as the career path of an individual in an organisation. Additionally, the org structure also becomes the reporting relationships that people might love or hate. We chose to detach Org structure (keep it flat) and career growth path. We designed the growth path to be based on dimensions of responsibilities: <strong>Impact, Innovation & Leadership</strong>, while the org structure was focussed on pure building blocks of the company. This is an on-going task, we are still working and making it fine-tuned.</li>
@@ -192,25 +195,37 @@ The picture above helped us finding opportunities to improve and fine-tune the h
 <li><strong>Productivity</strong>: The purpose of an Org structure is to enable engineers to be more productive - reduce blockers, increase collaboration. In the new batch of the series, I explain in detail about the Development practices and processes that helped us with productivity.</li>
 </ul>
 <h4 id=tribes-squads-chapters>Tribes-Squads-Chapters</h4>
-<p><a href=https://www.atlassian.com/agile/agile-at-scale/spotify rel=noopener target=_blank>`Spotify Model`</a> answers most of the guiding principles listed above, hence, it was our defacto choice to organise the team. Having said that, Spotify model doesn&rsquo;t answer many questions, so, we did not consider</p>
+<p><a href=https://www.atlassian.com/agile/agile-at-scale/spotify rel=noopener target=_blank>Spotify Model</a> answers most of the guiding principles listed above, hence, it was our defacto choice to organise the team. Having said that, Spotify model doesn&rsquo;t answer many questions, so, we did not consider &ndash;</p>
 <blockquote>
 <p><strong>Spotify model as a framework</strong></p>
 </blockquote>
-<p>(as suggested by Henrik Kniberg in his article <a href=https://blog.crisp.se/2015/06/07/henrikkniberg/no-i-didnt-invent-the-spotify-model rel=noopener target=_blank>No, I didn’t invent the Spotify model</a>) but as guidelines for autonomy, communication, accountability, and quality.</p>
-<p>We organised ourselves in Squads & Chapters.</p>
-<p>
+<p>&ndash; but as guidelines for autonomy, communication, accountability, and quality (as suggested by Henrik Kniberg in his article - <a href=https://blog.crisp.se/2015/06/07/henrikkniberg/no-i-didnt-invent-the-spotify-model rel=noopener target=_blank>No, I didn’t invent the Spotify model</a>).</p>
+<h6 id=organising-ourselves-in-squads--chapters>Organising ourselves in Squads & Chapters</h6>
+<blockquote>
+<p><strong>Conway&rsquo;s Law</strong>: Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization’s communication structure.</p>
+</blockquote>
+<p>In short - communication structure in the organisation directly influences the design of technical systems. So, if we inverse Conway&rsquo;s Law - for optimal system architectural designs, we have to simplify the communication structure in which, team size plays an important role in socio-interactions. Hence, our choice was to <strong>build small X-as-service provider teams</strong> knitted together through loosely coupled API communication and customer journeys:</p>
+<ul>
+<li>registration journey</li>
+<li>payment journey</li>
+<li>transfer journey</li>
+<li>partner integration journey</li>
+</ul>
+<p>A typical squad would be lead by a combination of PO and Tech Lead (who are also responsible for the scrum ceremonies). Additionally, a squad will also have FSE - Full Stack Engineers (each specialising in FE or BE) and Quality Engineers (for automation). We tried to maintain a healthy ratio of 3:1 (for every 3 developers, 1 QE) - as depicted below:
 <figure>
 <img src=/img/squad-structure.jpg alt>
 <center><figcaption>Squad Structure</figcaption></center>
 </figure>
-A typical squad would be lead by a combination of PO and Tech Lead (who are also responsible for the scrum ceremonies). Additionally, a squad will also have FSE - Full Stack Engineers (each specialising in FE or BE) and Quality Engineers. We tried to maintain a healthy ratio of 3:1 (for every 3 developers, 1 QE). I have my opinion about FSE, it&rsquo;s a myth that an Engineer can be an all-rounder - who can specialise in FE, BE and Systems - <em>opinion for another article</em>. Our approach has been to pair FE and BE devs together to optimise productivity and during this process they get to learn from each other. Additionally, we also did some boot-camps for Flutter (for BE Engg) amd NodeJS (for FE Engg).</p>
+</p>
+<p><em>In my opinion, it&rsquo;s a myth that an Engineer can be an all-rounder - expert in FE, BE and Systems (aka Infra). I prefer to maximise on their strength, make them work as pairs to optimise productivity & quality.</em> (may be an article for future)</p>
+<p>The picture below represents the squad/chapter setup we had in-place.</p>
 <p>
 <figure>
 <img src=/img/squads-chapters.jpg alt>
 <center><figcaption>Squads and Chapters</figcaption></center>
 </figure>
-If you haven&rsquo;t read about Squads and Chapters, look at the quict intro at <a href=https://www.atlassian.com/agile/agile-at-scale/spotify rel=noopener target=_blank>Discover Spotify Model</a></p>
-<p>We built some core squads responsible for specialised work:</p>
+</p>
+<p>In addition, we built some core squads responsible for specialised work:</p>
 <ul>
 <li><strong>Platform Engineering</strong> (<em>more on this in the upcoming post</em>): they are responsible for: cross-cutting concerns, engineering tools/platforms/components that are used across all teams, gatekeepers of scale, reliability, security. In short they are glue between Product Delivery and Infrastructure squads.</li>
 <li><strong>Samurai</strong>: A specialised squad responsible for managing Automation frameworks, Performance/ Load test frameworks, DevSecOps</li>
@@ -221,22 +236,19 @@ If you haven&rsquo;t read about Squads and Chapters, look at the quict intro at 
 </figure>
 </li>
 </ul>
-<blockquote>
-<p>what was not working well</p>
-</blockquote>
-<p>The model worked beautifully for 8-9 squads but as we started to scale, we started to see issues with: communication across squads, prioritisation, alignment of practices, architecture decisions, cross-cutting common components, observability - to name a few. Like I said, to solve we had to introduce processes in-place - will explain at in the practices article next.</p>
 <h4 id=the-upskilling-program>The upskilling program</h4>
-<p>Or rather capability building - we designed a number of boot-camps and upskilling programs to make sure everyone can take out time to learn. Some are listed below:</p>
+<p><strong>Or rather capability building</strong> - we designed a number of boot-camps and upskilling programs to make sure everyone is spending time outside of deliveries to learn & grow. Some are listed below:</p>
 <ul>
 <li>best practices for writing good quality software</li>
 <li>good practices for writing stories & managing backlogs (including cross-squad alignment)</li>
+<li>boot-camps for learning Flutter & NodeJS</li>
 <li>how to effectively use OKRs to manage priorities and cross tribe/ squad dependencies</li>
 <li>devops boot-camps</li>
 </ul>
 <h2 id=pitfalls-and-learnings>Pitfalls and learnings</h2>
-<p>It was a great learning experience building a setup from ground zero and scale to 300+ in less than 2 years. For sure, we made many mistakes but learnt immensely during this journey. Some of the important ones to highlight here:</p>
+<p>Building an engineering setup from ground zero and scale it to 300+ in less than 2 years was a huge-undertaking. For sure, we had many learnings during this journey, some of the important ones to highlight here:</p>
 <ul>
-<li><strong>Build Platform Engineering squad</strong> 👍: Do an early investment in shaping Platform Engineering Squad and make sure they have enough capacity as you grow. We did so and hence, we reaped benefits of having:
+<li><strong>Build Platform Engineering squad</strong> 👍: Do an early investment in shaping <em>Platform Engineering Squad</em> and make sure they have enough capacity as you grow. We did so and hence, we reaped benefits of having:
 <ul>
 <li>reference blue-print of the architecture</li>
 <li>cross-cutting concerns (re-usuable modules & boiler-plate code) were developed before product squads started to write features. This helped in reducing the spaghetti of code duplication and inconsistency across various squads</li>
@@ -262,22 +274,26 @@ are good examples of outcomes produced by squads. In the next article, I would w
 </ul>
 </li>
 <li><strong>Have a regular cadence of sessions with the whole Organisation</strong> 👌: share the larger picture, celebrate successes & learnings</li>
-<li><strong>Designing career path/ growth</strong> is tough 👎. Do early investment</li>
+<li><strong>Designing career path/ growth</strong> is tough 👎. Do an early investment</li>
 </ul>
-<p>I hope this article was an interesting read and provided good insights on our journey building an Engineering team.</p>
 <hr>
 <p>People talk a lot about Engineering culture, however my strong belief is:
 <code>practices followed in the organisation gets into DNA and hence becomes the culture</code>
-I would like to hear your thoughts on Engineering Culture and ending this article with the statement:</p>
+I would like to hear your thoughts on Engineering Culture. Ending this article with the statement:</p>
 <blockquote>
-<p><strong>Engineering culture (or rather any culture) is an outcome of practices followed by them</strong></p>
+<p><strong>Engineering culture (or rather any culture) is an outcome of practices</strong></p>
 </blockquote>
-<p><em>(more on this in a separate article)</em></p>
+<p><em>(more on this in a separate post)</em></p>
+<p>I hope this article was an interesting read and provided good insights on our journey building an Engineering team.</p>
 <hr>
 <ul class=pager>
 <li class=previous>
-<a href=/2021/12/09/building-engineering-setup-financial-services/ data-toggle=tooltip data-placement=top title="Building an Engineering setup in Financial Services">&larr;
+<a href=/2022/01/02/building-engineering-setup-financial-services/ data-toggle=tooltip data-placement=top title="Building an Engineering setup for a Financial Service Instituition">&larr;
 Previous Post</a>
+</li>
+<li class=next>
+<a href=/2022/01/04/technology-choice-and-engineering-practices/ data-toggle=tooltip data-placement=top title="Technology choices and Engineering practices">Next
+Post &rarr;</a>
 </li>
 </ul>
 <div id=disqus-comment></div>
@@ -360,7 +376,7 @@ sidebar-container">
 </li>
 </ul>
 <p class="copyright text-muted">
-Copyright &copy; Amit Kumar 2021
+Copyright &copy; Amit Kumar 2022
 <br>
 <a href=https://themes.gohugo.io/hugo-theme-cleanwhite>CleanWhite Hugo Theme</a> by <a href=https://zhaohuabing.com>Huabing</a> |
 <iframe style=margin-left:2px;margin-bottom:-5px frameborder=0 scrolling=0 width=100px height=20px src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true"></iframe>
