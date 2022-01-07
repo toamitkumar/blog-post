@@ -6,7 +6,7 @@ excerpt: "Third article of the series of 5 posts describing the journey to build
 description: "Third article of the series of 5 posts describing the journey to build Product & Engineering for Financial Services"
 date:       2022-01-05
 author: Amit Kumar
-image: "img/home-bg.jpg"
+image: "img/platform-engineering.jpg"
 published: true
 
 tags:

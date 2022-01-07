@@ -6,7 +6,7 @@ excerpt: "Second article of the series of 5 posts describing the journey to buil
 description: "Second batch of the series of 5 posts describing the journey to build Product & Engineering for Financial Services"
 date:       2022-01-04
 author: Amit Kumar
-image: "img/home-bg.jpg"
+image: "img/technology-choices.jpg"
 published: true
 
 tags:
