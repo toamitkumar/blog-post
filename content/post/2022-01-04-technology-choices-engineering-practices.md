@@ -21,7 +21,7 @@ categories: [ Tech ]
 URL: "/2022/01/04/technology-choice-and-engineering-practices/"
 ---
 
-The second article of the series of 5 articles describing my journey to build an Engineering setup in Financial Services. Read the [preface](/2022/01/02/building-engineering-setup-financial-services/). 
+The second article of the series of 5 articles describes my journey to build an Engineering setup in Financial Services. Read the [preface](/2022/01/02/building-engineering-setup-financial-services/). 
 
 - [Building and scaling Engineering team](/2022/01/03/building-and-scaling-engineering-team/): Principles and practices adopted to build the product and engineering team
 - **Technology choices & Engineering practices**: We took an outward-in approach to establish the foundation of technology stack, architecture/design choices & engineering practices
