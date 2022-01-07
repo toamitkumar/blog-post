@@ -25,7 +25,7 @@ The third article of the series of 5 articles describing my journey to build an 
 
 - [Building and scaling Engineering team](/2022/01/03/building-and-scaling-engineering-team/): Principles and practices adopted to build the product and engineering team
 - [Technology choices & Engineering practices](/2022/01/04/technology-choice-and-engineering-practices/): We took an outward-in approach to establish the foundation of technology stack, architecture/design choices & engineering practices
-- **Platform Engineering**: A team responsible for architecture reference, engineering tools/ practices, cross-cutting-concerns, Devops processes, playbooks. Provide platform-as-service to the internal product team.
+- **Platform Engineering**: A team responsible for architecture reference, engineering tools/ practices, cross-cutting-concerns, DevOps processes, playbooks. Provide platform-as-service to the internal product team.
 - _Infrastructure_: The core principle was IAC (Infrastructure as Code). We built service-oriented structure with Infrastructure as Service
 - _Operations - keep the lights ON aka DevOps_: Traditionally, financial services have a dedicated operations team. Following DevOps principle, we followed -- _You build it, you run it!_
 ---

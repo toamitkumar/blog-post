@@ -1,6 +1,6 @@
 ---
 showonlyimage: true
-title:      "Building an Engineering setup for a Financial Service Instituition"
+title:      "Building an Engineering setup for a Financial Service Institution"
 subtitle:   "A series of 5 posts describing the journey to build Product & Engineering for Financial Services"
 excerpt: ""
 description: ""
@@ -62,7 +62,7 @@ Establish very clear expectations for engineers - no matter the number of years 
 Have one single source of truth - multiple sources create process mess - agile backlog, source code, customer identity are just a few examples.
 
 ###### 4. Be Predictable
-Predictability is one of the biggest challenge I have seen in software build. Questions like, when will this feature be ready for production, is very common. It is a hard problem to solve, however, without predictability, it becomes difficult for other functions in the organisation — Sales or GTM or compliance, to plan for releases. It becomes imperative to make sure we build the setup **as transparent and as predictable** as possible. 
+Predictability is one of the biggest challenges I have seen in software build. Questions like, when will this feature be ready for production, is very common. It is a hard problem to solve, however, without predictability, it becomes difficult for other functions in the organisation — Sales or GTM or compliance, to plan for releases. It becomes imperative to make sure we build the setup **as transparent and as predictable** as possible. 
 
 ###### 5. Build X-as-a-service mindset
 Invest in building the mindset of internal service providers. This is an extension of the {{< link_target_blank href="https://api-university.com/blog/the-api-mandate/" title="Jeff Bezos API Mandate" >}} where he declared that all communication between teams should happen using APIs. Enforce teams to build components that can be re-used or consumed as a service. This is deeply related to one of the DK Values: **Customer Centricity**.
@@ -71,13 +71,13 @@ Invest in building the mindset of internal service providers. This is an extensi
 This has been my own mantra of life - as a professional, it is very important to make sure anything you touch, make it better. Be it code that you modified, be it a test case that you fixed, be it a design change, be it a process that you were working or be it a production incident. Do the right thing, avoid taking short-cuts, the cost of fixing it later is very high.
 
 ###### 7. Make processes measurable
-**You can manage and optimise only when you can measure**. Define metrics to make processes measurable. More on this in upcoming post.
+**You can manage and optimise only when you can measure**. Define metrics to make processes measurable. More on this in the upcoming post.
 
 The series of posts cover:
 
 - [Building and scaling Engineering team](/2022/01/03/building-and-scaling-engineering-team/): Principles and practices adopted to build the product and engineering team
 - [Technology choices & Engineering practices](/2022/01/04/technology-choice-and-engineering-practices/): We took an outward-in approach to establish the foundation of technology stack, architecture/  design choices & engineering practices
-- [Platform Engineering](/2022/01/05/platform-engineering/): A team responsible for architecture reference, engineering tools/ practices, cross-cutting-concerns, Devops processes, playbooks Provide platform-as-service to the internal product team.
+- [Platform Engineering](/2022/01/05/platform-engineering/): A team responsible for architecture reference, engineering tools/ practices, cross-cutting-concerns, DevOps processes, playbooks Provide platform-as-service to the internal product team.
 - _Infrastructure_: The core principle was IAC (Infrastructure as Code). We built service-oriented structure with Infrastructure as Service
 - _Operations - keep the lights ON aka DevOps_: Traditionally, financial services have a dedicated operations team. Following DevOps principle, we followed -- _You build it, you run it!_
 ---
