@@ -280,7 +280,7 @@ and my chat with <a href=https://www.linkedin.com/in/csells/ rel=noopener target
 <li>Design for Async (least coupling)</li>
 </ul>
 </li>
-<li><strong>Invest in building cross-cutting-concerns</strong> (do a very early investment): this is the basis of Platform Engineering post (coming soon)</li>
+<li><strong>Invest in building cross-cutting-concerns</strong> (do a very early investment): this is the basis of the <a href=/2022/01/05/platform-engineering/>Platform Engineering</a> post</li>
 <li>Reduce entropy - make architecture composable</li>
 <li>Organize code and pipelines (automate all components, everything is code including configurations)</li>
 <li>Version code/ APIs (use Semver). Document APIs (we used <a href=https://redoc.ly/ rel=noopener target=_blank>Redocly</a>)</li>
@@ -289,9 +289,9 @@ and my chat with <a href=https://www.linkedin.com/in/csells/ rel=noopener target
 <li><strong>RFCs and ADRs are a must</strong>: <a href=https://engineering.atspotify.com/2020/04/14/when-should-i-write-an-architecture-decision-record/ rel=noopener target=_blank>when should you write an Architecture Decision Record</a>. If you&rsquo;re interested more, read <a href=https://medium.com/ibm-garage/gitarchitecture-a-better-way-to-capture-architectural-decisions-b3574a3d604 rel=noopener target=_blank>Git Architecture — a better way to capture Architectural decisions</a> by Kyle Gene Brown.</li>
 <li><strong>De-couple deployment and release. Feature flag them</strong>
 <ul>
-<li>Deployments should be as per schedule (we deploy to production at the end of each sprint). Frequent deployments <code>reduces the blast radius</code></li>
+<li>Deployments should be as per schedule (we deploy to production at the end of each sprint). Frequent deployments <code>reduce the blast radius</code></li>
 <li>Enables capabilities for <em>Canary deployments</em> with sophisticated <code>Feature Flags</code></li>
-<li>Feature release is driven by Product Team based on: feature completeness or other strategies
+<li>Feature release is driven by the Product Team based on: feature completeness or other strategies
 <figure>
 <img src=/img/deployment-train.jpg alt>
 <center><figcaption>Deployment & Release Train</figcaption></center>
@@ -331,10 +331,10 @@ and my chat with <a href=https://www.linkedin.com/in/csells/ rel=noopener target
 <p>As far as it goes with me, there are 3 major pillars of software development practices: <strong>Predictability, Quality and Automation</strong>.</p>
 <h4 id=predictability>Predictability</h4>
 <p>Your backlog should be the <strong>source of truth</strong> for any task the developers do. Enforce to make sure this gets strictly followed, even if it is not related to writing code (make sure tickets are tagged, so that you can accordingly measure time spent outside of writing code). All public releases should be based on churn-rate of the backlog - this helps the product & GTM (go-to-market) team plan feature releases.</p>
-<h5 id=the-anti-pattern-prioritise-initiatives-which-are-dependent-on-multiple-squads>The anti-pattern: Prioritise initiatives which are dependent on multiple squads</h5>
-<p>We faced a similar challenge - feature had multiple squad dependency and priorities need to be worked on. There are various ways to solve this, however, the one that has started to work for us: <strong>single backlog across all squads</strong>. Make sure you have one single backlog, it helps to bring one single view of features and henceforth easier to prioritise. It also helps to make cross-squad dependency visible for better management. One of the other way, I have seen this working is through vertical slicing of features — reduce cross-squad dependencies but in a distributed system setup, this is rather difficult to implement.</p>
+<h5 id=the-anti-pattern-prioritise-initiatives-that-are-dependent-on-multiple-squads>The anti-pattern: Prioritise initiatives that are dependent on multiple squads</h5>
+<p>We faced a similar challenge - the feature had multiple squad dependencies and priorities need to be worked on. There are various ways to solve this, however, the one that has started to work for us: <strong>single backlog across all squads</strong>. Make sure you have one single backlog, it helps to bring one single view of features and henceforth easier to prioritise. It also helps to make cross-squad dependency visible for better management. One of the other ways, I have seen this working is through vertical slicing of features — reducing cross-squad dependencies but in a distributed system setup, this is rather difficult to implement.</p>
 <h4 id=quality>Quality</h4>
-<p>Quality doesn&rsquo;t need an introduction but I will focus on one aspect of software process (which is very close to me) - testing. I consider testing and people related to them as <strong>First class citizens</strong>. In our world of complex, distributed systems, testing is vital to reduce the risks of downtime and disruption. Testing is the responsibility of the whole squad, not only our testers. In essence, our QAs are gate-keepers of quality that gets delivered from the squad.</p>
+<p>Quality doesn&rsquo;t need an introduction but I will focus on one aspect of the software process (which is very close to me) - testing. I consider testing and people related to them as <strong>First-class citizens</strong>. In our world of complex, distributed systems, testing is vital to reduce the risks of downtime and disruption. Testing is the responsibility of the whole squad, not only our testers. In essence, our QAs are gate-keepers of quality that get delivered from the squad.</p>
 <blockquote>
 <p>Remember, when something goes wrong on production, the first thing that people question, did we do proper testing?</p>
 </blockquote>
@@ -356,6 +356,7 @@ and my chat with <a href=https://www.linkedin.com/in/csells/ rel=noopener target
 <center><figcaption>Engineering cadence</figcaption></center>
 </figure>
 </p>
+<p>Each one of the above forums has relevance based on the frequency we followed.</p>
 <p>Read through the next article on <a href=/2022/01/05/platform-engineering/>Platform Engineering</a>.</p>
 <hr>
 <ul class=pager>
