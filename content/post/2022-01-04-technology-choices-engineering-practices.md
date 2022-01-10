@@ -102,7 +102,7 @@ Like always, we created some guiding principles, some highlighted ones:
     - Keep in-mind x-as-a-service
     - Secure service 
     - Design for Async (least coupling)
-- **Invest in building cross-cutting-concerns** (do a very early investment): this is the basis of Platform Engineering post (coming soon)
+- **Invest in building cross-cutting-concerns** (do a very early investment): this is the basis of the [Platform Engineering](/2022/01/05/platform-engineering/) post 
 - Reduce entropy - make architecture composable
 - Organize code and pipelines (automate all components, everything is code including configurations)
 - Version code/ APIs (use Semver). Document APIs (we used {{< link_target_blank href="https://redoc.ly/" title="Redocly" >}})
@@ -110,9 +110,9 @@ Like always, we created some guiding principles, some highlighted ones:
 - Follow test pyramid (invest in automation but remember it doesn't solve all testing problems, you still need to do manual testing. Follow measuring ROI)
 - **RFCs and ADRs are a must**: {{< link_target_blank href="https://engineering.atspotify.com/2020/04/14/when-should-i-write-an-architecture-decision-record/" title="when should you write an Architecture Decision Record">}}. If you're interested more, read {{< link_target_blank href="https://medium.com/ibm-garage/gitarchitecture-a-better-way-to-capture-architectural-decisions-b3574a3d604" title="Git Architecture — a better way to capture Architectural decisions" >}} by Kyle Gene Brown.
 - **De-couple deployment and release. Feature flag them**
-    - Deployments should be as per schedule (we deploy to production at the end of each sprint). Frequent deployments `reduces the blast radius`
+    - Deployments should be as per schedule (we deploy to production at the end of each sprint). Frequent deployments `reduce the blast radius`
     - Enables capabilities for _Canary deployments_ with sophisticated `Feature Flags`
-    - Feature release is driven by Product Team based on: feature completeness or other strategies
+    - Feature release is driven by the Product Team based on: feature completeness or other strategies
     ![](/img/deployment-train.jpg "Deployment & Release Train")
 - **Follow deployment train**: we have a strict cadence of deploying working software at the end of each sprint: development, test, validate performance and deploy (as depicted in the picture above). Squads can choose to catch or leave the train based on the readiness of their feature.
 - **Design for failure**
@@ -144,11 +144,11 @@ As far as it goes with me, there are 3 major pillars of software development pra
 #### Predictability
 Your backlog should be the **source of truth** for any task the developers do. Enforce to make sure this gets strictly followed, even if it is not related to writing code (make sure tickets are tagged, so that you can accordingly measure time spent outside of writing code). All public releases should be based on churn-rate of the backlog - this helps the product & GTM (go-to-market) team plan feature releases.
 
-##### The anti-pattern: Prioritise initiatives which are dependent on multiple squads
-We faced a similar challenge - feature had multiple squad dependency and priorities need to be worked on. There are various ways to solve this, however, the one that has started to work for us: **single backlog across all squads**. Make sure you have one single backlog, it helps to bring one single view of features and henceforth easier to prioritise. It also helps to make cross-squad dependency visible for better management. One of the other way, I have seen this working is through vertical slicing of features — reduce cross-squad dependencies but in a distributed system setup, this is rather difficult to implement.
+##### The anti-pattern: Prioritise initiatives that are dependent on multiple squads
+We faced a similar challenge - the feature had multiple squad dependencies and priorities need to be worked on. There are various ways to solve this, however, the one that has started to work for us: **single backlog across all squads**. Make sure you have one single backlog, it helps to bring one single view of features and henceforth easier to prioritise. It also helps to make cross-squad dependency visible for better management. One of the other ways, I have seen this working is through vertical slicing of features — reducing cross-squad dependencies but in a distributed system setup, this is rather difficult to implement.
 
 #### Quality
-Quality doesn't need an introduction but I will focus on one aspect of software process (which is very close to me) - testing. I consider testing and people related to them as **First class citizens**. In our world of complex, distributed systems, testing is vital to reduce the risks of downtime and disruption. Testing is the responsibility of the whole squad, not only our testers. In essence, our QAs are gate-keepers of quality that gets delivered from the squad. 
+Quality doesn't need an introduction but I will focus on one aspect of the software process (which is very close to me) - testing. I consider testing and people related to them as **First-class citizens**. In our world of complex, distributed systems, testing is vital to reduce the risks of downtime and disruption. Testing is the responsibility of the whole squad, not only our testers. In essence, our QAs are gate-keepers of quality that get delivered from the squad. 
 
 > Remember, when something goes wrong on production, the first thing that people question, did we do proper testing?
 
@@ -171,5 +171,7 @@ we followed the about guiding principle across. It took time (still needs consta
 ### Engineering cadence and forums
 Having cadence and a regular touch-point becomes an important aspect of communication flow across the organisation. We enabled multiple forums to have information flowing related to OKR and technical design discussions. 
 ![](/img/engineering-cadence.jpg "Engineering cadence")
+
+Each one of the above forums has relevance based on the frequency we followed.
 
 Read through the next article on [Platform Engineering](/2022/01/05/platform-engineering/).
