@@ -26,35 +26,35 @@ The third article of the series of 5 articles describes my journey to build an E
 - [Building and scaling Engineering team](/2022/01/03/building-and-scaling-engineering-team/): Principles and practices adopted to build the product and engineering team
 - [Technology choices & Engineering practices](/2022/01/04/technology-choice-and-engineering-practices/): We took an outward-in approach to establish the foundation of technology stack, architecture/design choices & engineering practices
 - **Platform Engineering**: A team responsible for architecture reference, engineering tools/ practices, cross-cutting-concerns, DevOps processes, playbooks. Provide platform-as-service to the internal product team.
-- _Infrastructure_: The core principle was IAC (Infrastructure as Code). We built service-oriented structure with Infrastructure as Service
+- [Infrastructure](/2022/01/27/infrastructure-as-a-service/): The core principle was IAC (Infrastructure as Code). We built a service-oriented structure with Infrastructure as Service
 - _Operations - keep the lights ON aka DevOps_: Traditionally, financial services have a dedicated operations team. Following DevOps principle, we followed -- _You build it, you run it!_
 ---
 
-Distributed application and system architecture has increased complexity of building, testing and running software and hence, responsibilities for feature development squads increases manifold. There is a dire need for a squad which is responsible to anchor and off-load these responsibilities aka everything outside of feature development to their backlog.
+Distributed application and system architecture have increased the complexity of building, testing and, running software and hence, responsibilities for feature development squads increases manifold. There is a dire need for a squad that is responsible to anchor and off-load these responsibilities aka everything outside of feature development to their backlog.
 
 ### Birth of Platform Engineering Squad (aka Anchor Squad)
 
-When we started to build DKatalis Engineering setup, there was a need of a squad who would own, drive and enable feature or product development squads with capabilities, for e.g.: CI pipeline, reusable modules (I call them `cross-cutting-concerns`), boilerplate code modules to name a few, frameworks for performance or automation test suites - the list grows based on how much reusability you would like to introduce.
+When we started to build DKatalis Engineering setup, there was a need for a squad who would own, drive and enable the feature or product development squads with capabilities, for e.g.: CI pipeline, reusable modules (I call them `cross-cutting-concerns`), boilerplate code modules to name a few, frameworks for performance or automation test suites - the list grows based on how much reusability you would like to introduce.
 
-Hence, we established the _Anchor squad_ (later they named themselves **Mars Squad**) who were tasked to own these responsibilities including creating/ guarding the `blue-print` of architecture & design of the near-end-state. The early members of this squad had: {{< link_target_blank href="https://www.linkedin.com/in/jayendrapatil/" title="Jayendra Patil" >}}, {{< link_target_blank href="https://www.linkedin.com/in/srilekhamisra" title="Srilekha Misra" >}}, {{< link_target_blank href="https://www.linkedin.com/in/jeevan-d-c/" title="Jeevan D C" >}}, {{< link_target_blank href="https://www.linkedin.com/in/haldarmahesh" title="Mahesh Haldar" >}}, {{< link_target_blank href="https://www.linkedin.com/in/rashmi-ranganathan/" title="Rashmi Ranganathan" >}} & {{< link_target_blank href="https://www.linkedin.com/in/vibhav-gulati/" title="Vibhav Gulati" >}}
+Hence, we established the _Anchor squad_ (later they named themselves **Mars**) who were tasked to own these responsibilities including creating/ guarding the `blue-print` of architecture & design of the near-end-state. The early members of this squad had: {{< link_target_blank href="https://www.linkedin.com/in/jayendrapatil/" title="Jayendra Patil" >}}, {{< link_target_blank href="https://www.linkedin.com/in/srilekhamisra" title="Srilekha Misra" >}}, {{< link_target_blank href="https://www.linkedin.com/in/jeevan-d-c/" title="Jeevan D C" >}}, {{< link_target_blank href="https://www.linkedin.com/in/haldarmahesh" title="Mahesh Haldar" >}}, {{< link_target_blank href="https://www.linkedin.com/in/rashmi-ranganathan/" title="Rashmi Ranganathan" >}} & {{< link_target_blank href="https://www.linkedin.com/in/vibhav-gulati/" title="Vibhav Gulati" >}}
 
-Before we get into details, lets first understand what is the meaning of **Platform** and **Platform Engineering**.
+Before we get into details, let's first understand what is the meaning of **Platform** and **Platform Engineering**.
 
 ### What is a Platform
 Platform, as explained in the article from {{< link_target_blank href="https://martinfowler.com/articles/platform-prerequisites.html" title="Martin Fowler's" >}} post, is a broad term and it has different meanings based on context. But, in the context of software and complexities around building a distributed application, I define it as:
 
 > A system or a collection of systems & processes that abstracts the lower level complexities of operating (building, running, monitoring, maintaining) a distributed software & infrastructure setup, enhances developer productivity/ efficiency and decreases time-to-market. 
 
-You have to make sure, platform (a product with internal feature developers as audience) has a business value and anything that impacts smooth working of the platform should be taken as high priority (similar to how a CX is important). In essence, a platform team is `glue between feature developers and infrastructure team` with the following:
+You have to make sure, platform (a product with internal feature developers as audience) has a business value, and anything that impacts the smooth working of the platform should be taken as high priority (similar to how a CX is important). In essence, a platform team is `glue between feature developers and infrastructure team` with the following:
 - engineering accelerators (e.g.: pipelines, templates, container-cluster, automation frameworks)
-- cross-cutting concerns (reusuable libraries, modules)
+- cross-cutting concerns (reusable libraries, modules)
 - tools/ products either open source or licensed (APIGW, Identity System, Messaging system)
 - devops processes
 - effective incident management
 
-### Team that manages platform components
+### The Team that manages platform components
 
-Aligning with our 5th guiding principle: [Build X-as-a-service]({{< relref path="2022-01-02-building-engineering-financial-services.md#5-build-x-as-a-service-mindset">}}) mindset, platform team serves as **PaaS** internally.
+Aligning with our 5th guiding principle: [Build X-as-a-service]({{< relref path="2022-01-02-building-engineering-financial-services.md#5-build-x-as-a-service-mindset">}}) mindset, the platform team serves as **PaaS** internally.
 For us, they are also, **guardians of architectural reference and innovation** (members of architecture guild) and Gate-keepers of {{< link_target_blank href="https://toamitkumar.in/2021/01/30/guardrail-ed-autonomy/" title="tech-stack guard-rails" >}}.  
 Since, we were working for Financial Services setup, as per regulation, we must do yearly DR Swing process - in short, all the services should run in a DRC environment for a defined period. PE squad is also responsible to anchor the DRC process - Infra and services.
 
@@ -63,14 +63,14 @@ The below picture represents the breadth of their responsibilities.
 ![](/img/Paas.jpg "Platform as a Service")
 
 ##### How this fits into Tribes and Squads
-If you look at the picture below, there are a few other supporting squads that worked together to support a smooth functioning of Feature development tribes and squads - each supporting squad providing specialised capability to improve productivity and reduce time to market.
+If you look at the picture below, there are a few other supporting squads that worked together to support the smooth functioning of Feature development tribes and squads - each supporting squad providing specialised capability to improve productivity and reduce time to market.
 ![](/img/org-structure.jpg "Oragnisation Structure")
 
 ##### Is this an anti-pattern (against DevOps policy of cross-collaborative teams)
 
 In my experience, many setups don't realise the amount of work needed beyond having a cloud provider - complexities of managing a distributed application in Prod and lower environments. Hence, PE team becomes a necessity but you've to be careful to avoid silos. We faced this challenge as PE became the nucleus and no other squad wanted to own the responsibility of collaboration. 
 
-I am a big fan of **Linux philosophy: Single responsibility principle**, hence, if we follow this principle, having a dedicated set of software engineers to work without interruption on big, complex problems becomes important. They are focussed on introspecting the entire software development lifecycle to reduce the shipping time to production.
+I am a big fan of **Linux philosophy: Single responsibility principle**, hence, if we follow this principle, having a dedicated set of software engineers to work without interruption on big, complex problems becomes important. They are focused on introspecting the entire software development lifecycle to reduce the shipping time to production.
 
 ### Guiding principles
 
