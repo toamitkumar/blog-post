@@ -41,10 +41,10 @@ The infrastructure team was formed following our core guiding principle - [_X-as
 
 ### Guiding principles
 - **Infrastructure as Code**: all infra components should be built using a combination of Terraform & Ansible, in short treat all Infra components as a code. _Good coding practices will be applied on Infra code through **code-linters**. Read this {{< link_target_blank href="https://martinfowler.com/bliki/InfrastructureAsCode.htmlr" title="article from Martin Fowler" >}}.
-- **Infrastructure should be testable**: make sure to write modular and testable Infra code.
+- **Infrastructure should be testable**: make sure to write modular and testable Infra code. This has been one of the areas difficult to achieve given the lack of tools that help measure the quality of scripts. Additionally, not all cloud platforms support using libraries like {{< link_target_blank href="https://terratest.gruntwork.io/" title="Terratest" >}}. Once we migrated to GCP, it is now easier to bring test coverage to terraform code.
 - **Created through a CI pipeline and managed through idempotent states**: Infra shouldn't be created manually or through scripts run from any machine (including local machine). Use CI pipelines and manage the state of Infra as a versioned code artifact.
-- **Zero trust policy**: by default Infra shouldn't be accessible, apply global access policies.
-- **Design for scale**: make sure Infra clusters are designed for high availability and scale
+- **Zero trust policy**: by default Infra shouldn't be accessible (especially for any changes manually); apply global access policies to RBAC through IAM policies.
+- **Design for scale**: make sure Infra clusters are designed for high availability and scale. Test for DR with backup/restore.
 - **Design for high observability**: make sure Infra components have proactive monitoring (threshold limits) and alerts enabled.
 - **Follow SLAs**: the infrastructure team will work as a well-oiled internal service provider will clear SLAs
 
@@ -65,8 +65,9 @@ Infrastructure is one of the core pillars of engineering (find ways to link to o
 ## The array of cloud providers
 When we started, one of the important considerations was data center and hosting bank products/ services (this was early 2019). Based on my experience, I was clear to avoid building a physical data center in Jakarta (Indonesia). Unfortunately, the only cloud provider available in Indonesia then was {{< link_target_blank href="https://id.alibabacloud.com/" title="Alibaba Cloud" >}} but none of us had previous experience working on the AlibabaCloud platform. AWS & GCP were on their path to establish their regional setup in Indonesia but it was unclear when operations would start for us to build our data center on their platform.
 
-#### AWS Outposts or GCP Anthos were good options
-It was lucrative to consider {{< link_target_blank href="https://aws.amazon.com/outposts/" title="Outposts">}} as it falls between having a DC and a cloud-native setup. This would also help make regulators comfortable given we were building for a highly regulated entity - a bank (a full cloud setup of a bank in this region is still a BIG thing). Similarly, {{< link_target_blank href="https://cloud.google.com/anthos" title="Anthos" >}}, was another option for us to consider but there were too many unknowns. 
+#### AWS Outposts or GCP Anthos with our own hardware were good options
+It was lucrative to consider {{< link_target_blank href="https://aws.amazon.com/outposts/" title="Outposts">}} as it falls between having a DC and a cloud-native setup. This would also help make regulators comfortable given we were building for a highly regulated entity - a bank (a full cloud setup of a bank in this region is still a BIG thing). But, Outposts wasn't ready by the time we started to ship their hardware. 
+Similarly, {{< link_target_blank href="https://cloud.google.com/anthos" title="Anthos" >}} with having our hardware, was another option for us to consider but there were too many unknowns. With clear intention to not have a physical data center, the only option left was AlibabaCloud.
 
 #### It was AlibabaCloud
 With some back-n-forth and with scale in mind, we settled for AlibabCloud as our hosting setup. The guiding principles were indicators on how the team was going to operate. From a cloud provider perspective, Alibabacloud is similar to AWS (at least the cloud platform APIs) and hence it was relatively similar (given some of us had exposure to AWS) to build the cloud platform.
