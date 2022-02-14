@@ -10,18 +10,17 @@ He is strong believer of:
 
 He started his journey as a Java Engineer writing Servlets, JSPs, EJBs.. very early part of his career, he was influenced by industry veterans: [Uncle Bob aka Bob Martin](https://en.wikipedia.org/wiki/Robert_C._Martin) & [Neal Ford](http://nealford.com/). He learnt Agile software paradigm and architecture thinking from them. He is a close follower and implements modern engineering practices of using technology to solve business problems. He is in constant pursuit to find _simpler solutions to complex problems_.
 
-For the last 5 years, he has focussed on building Digital Solutions and Transforming Financial Service Institutions.
-Currently, he is driving engineering team to build Financial Service Solutions for [Bank Jago](https://jago.com/) - the fastest bank to become a Unicorn.
-
+For the last more than 6 years, he has focussed on building Digital Solutions and Transforming Financial Service Institutions.
+Currently, he is leading product and engineering teams to build Financial Service Solutions for [Bank Jago](https://jago.com/) - the fastest bank to become a Unicorn.
 
 ##### Competencies
-- Emerging trends/ technologies, architecture patterns
-- Cloud Computing (GCP, Alibaba Cloud, AWS) with focus on Security controls
-- Build Digital Bank (fully cloud-based) and Lending Infrastructure (including STP) - Team building & Engineering Engagement
-- Monetize business with API Ecosystem
+- **Emerging trends/ technologies**, architecture patterns
+- **Cloud Computing** (GCP, Alibaba Cloud, AWS) with focus on Security controls
+- **Build Digital Bank** (fully cloud-based) and Lending Infrastructure (including STP) - Team building & Engineering Engagement
+- Monetize business with **API Ecosystem**
 
 ##### Driving leadership abilities:
-- Established legal entity of DKatalis in Pune, India, to build regional scalable & predictable growth of Engineering capacity (over $3 million budget)
+- Established engineering setup (including legal entity) of DKatalis across 3 locations (Singapore, Pune - India, Jakarta - Indonesia), to build regional scalable & predictable growth of Engineering capacity (over $3 million budget)
 - Transformed IT Organisation of a Bank from a siloed setup towards being Agile and People-Centric (600+ employees, modified version of Spotify model)
 - Talented at demystifying tools, frameworks, and platforms for non-technical stakeholders
 
@@ -30,8 +29,7 @@ Currently, he is driving engineering team to build Financial Service Solutions f
 - Organizer of largest Javascript Conference (JSChannel) with 500+ attendees (2013-16) - Speaker at Ruby Conference globally – New Orleans, SFO, Melbourne, Belgium
 - Speaker at Agile Conference, Australia
 
-
-While he is not working, he enjoys watching movies, playing with his son, travelling, writing blogs and learning.
+While he is not working, he enjoys to walk by the white sand beach or drive through endless road/ ranges or playing with his son.
 
 **Little known facts about him**
 - he is a physics grad, stumbled to programming and started to write code as a brain exercise
