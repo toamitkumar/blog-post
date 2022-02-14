@@ -6,7 +6,7 @@ excerpt: "Fifth and final article of the series of 5 posts describing the journe
 description: "Fifth and final article of the series of 5 posts describing the journey to build Product & Engineering for Financial Services"
 date:       2022-02-02
 author: Amit Kumar
-image: "img/cloud-iaas.jpg"
+image: "img/operations-bank.jpg"
 published: true
 
 tags:
@@ -150,5 +150,5 @@ I often got this question, aren't Platform Engineers and SRE doing similar thing
 Additionally, the squad is built with different mindset of engineers. SRE thrives on crisis management and system outages while Platform Engineers are typical software engineers working on solving complex problems to enable productive in all aspects of the software delivery lifecycle.
 
 ---
-This article brings an end to the 5 article series to build a Financial Services Product organisation with focus on bleeding-edge Engineering practices.
+This article brings an end to the 5 article series to build a Financial Services Product organisation with focus on bleeding-edge Engineering practices. 
 
