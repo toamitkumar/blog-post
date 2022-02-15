@@ -27,7 +27,7 @@ The third article of the series of 5 articles describes my journey to build an E
 - [Technology choices & Engineering practices](/2022/01/04/technology-choice-and-engineering-practices/): We took an outward-in approach to establish the foundation of technology stack, architecture/design choices & engineering practices
 - **Platform Engineering**: A team responsible for architecture reference, engineering tools/ practices, cross-cutting-concerns, DevOps processes, playbooks. Provide platform-as-service to the internal product team.
 - [Infrastructure](/2022/01/27/infrastructure-as-a-service/): The core principle was IAC (Infrastructure as Code). We built a service-oriented structure with Infrastructure as Service
-- _Operations - keep the lights ON aka DevOps_: Traditionally, financial services have a dedicated operations team. Following DevOps principle, we followed -- _You build it, you run it!_
+- [Operations - keep the lights ON aka DevOps](/2022/02/02/infrastructure-as-a-service/): Traditionally, financial services have a dedicated operations team. Following DevOps principle, we followed -- _You build it, you run it!_
 ---
 
 Distributed application and system architecture have increased the complexity of building, testing and, running software and hence, responsibilities for feature development squads increases manifold. There is a dire need for a squad that is responsible to anchor and off-load these responsibilities aka everything outside of feature development to their backlog.
