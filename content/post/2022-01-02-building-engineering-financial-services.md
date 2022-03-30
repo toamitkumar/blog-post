@@ -62,7 +62,9 @@ Establish very clear expectations for engineers - no matter the number of years 
 Have one single source of truth - multiple sources create process mess - agile backlog, source code, customer identity are just a few examples.
 
 ###### 4. Be Predictable
-Predictability is one of the biggest challenges I have seen in software build. Questions like, when will this feature be ready for production, is very common. It is a hard problem to solve, however, without predictability, it becomes difficult for other functions in the organisation — Sales or GTM or compliance, to plan for releases. It becomes imperative to make sure we build the setup **as transparent and as predictable** as possible. 
+Predictability is one of the biggest challenges I have seen in software build. There are two parts to predictability:
+- code should do what it looks like it does (when you read the code or read the tests). It should be deterministic and observable
+- feature releases should be visible. Questions like, when will this feature be ready for production, is very common. It is a hard problem to solve, however, without predictability, it becomes difficult for other functions in the organisation — Sales or GTM or compliance, to plan for releases. It becomes imperative to make sure we build the setup **as transparent and as predictable** as possible. 
 
 ###### 5. Build X-as-a-service mindset
 Invest in building the mindset of internal service providers. This is an extension of the {{< link_target_blank href="https://api-university.com/blog/the-api-mandate/" title="Jeff Bezos API Mandate" >}} where he declared that all communication between teams should happen using APIs. Enforce teams to build components that can be reused or consumed as a service. This is deeply related to one of the DK Values: **Customer Centricity**.
